@@ -7,15 +7,15 @@ MIGRATION_DSN="postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@$(POSTGRES_HOST)
 
 # Собрать все сервисы без кеша
 build:
-	docker-compose build --no-cache
+	docker compose build --no-cache
 
 # Запустить все сервисы в фоновом режиме
 up:
-	docker-compose up -d
+	docker compose up -d
 
 # Остановить все сервисы
 down:
-	docker-compose down
+	docker compose down
 
 # Применить миграции
 migrate-up:
